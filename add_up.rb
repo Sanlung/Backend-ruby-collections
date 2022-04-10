@@ -1,17 +1,11 @@
 ## recursive
 # def add_up(i)
-#   if i > 0
-#     i + add_up(i-1)
-#   else
-#     0
-#   end
+#   i.positive? ? i + add_up(i - 1) : 0
 # end
 
-## iterator
-def add_up(i)
-  sum = 0
-  i.downto(1) { |i| sum += i}
-  sum
+# range method
+def add_up(num)
+  (1..num).sum
 end
 
 puts add_up(7)
