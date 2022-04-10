@@ -1,11 +1,10 @@
 class WordsList
   def initialize
     @words = []
-    while true
-      print "Enter a word (press enter to quit): "
+    loop do
+      print 'Enter a word (press enter to see the result): '
       word = gets.chomp
-      break if word == ""
-      @words << word
+      word == '' ? break : @words << word
     end
   end
 
